@@ -1,0 +1,21 @@
+@import "../../assets/global-styles/global-styles";
+
+#crop-option-menu {
+    margin-bottom: 1rem;
+    
+    .crop-option-menu_list {
+        display: flex;
+
+        .crop-option-menu_item {
+            button {
+                padding: 0.5rem 1rem;
+                border: $on-primary solid 1px;
+                color: $on-primary;
+            }
+
+            button:hover, button.active {
+                background: $primary-variant;
+            }
+        }
+    }
+}

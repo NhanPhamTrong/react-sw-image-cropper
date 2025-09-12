@@ -1,0 +1,22 @@
+// Breakpoints
+// 600px and DOWN: phones
+// 600px and UP: portrait tablets and large phones
+// 768px and up: landscape tablets
+// 992px and up: laptops/desktops
+// 1200px and up: large laptops and desktops
+
+// Colors
+$primary: rgb(53, 30, 10);
+$primary-variant: rgb(23, 0, 0);
+$on-primary: rgb(255, 255, 255);
+
+$secondary: rgb(230, 192, 43);
+$on-secondary: rgb(0, 0, 0);
+
+$background: rgb(30, 21, 5);
+$on-background: rgb(255, 255, 255);
+
+$surface: rgb(255, 255, 255);
+$on-surface: rgb(0, 0, 0);
+
+$error: rgb(225, 0, 0);

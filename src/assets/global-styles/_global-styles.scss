@@ -1,0 +1,50 @@
+@import "reset";
+@import "variables";
+@import "function";
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: $background;
+
+    #root {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+
+        main {
+            padding: 4rem 1rem 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        #root {
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        #root {
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        #root {
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        #root {
+            
+        }
+    }
+}

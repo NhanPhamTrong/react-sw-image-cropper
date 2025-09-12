@@ -1,0 +1,45 @@
+@import "../../assets/global-styles/global-styles";
+
+#sw-image-cropper {
+    padding: 2rem;
+    background: $primary;
+    border: $on-background solid 1px;
+    border-radius: 2rem;
+    color: $on-primary;
+
+    h1 {
+        text-align: center;
+    }
+
+    .image-upload-form {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+        border: $on-primary solid 1px;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .result {
+        padding: 1rem;
+        border: $on-primary solid 1px;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .result_crop-section, .result_final-image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .result_final-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

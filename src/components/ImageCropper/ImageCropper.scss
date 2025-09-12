@@ -1,0 +1,17 @@
+@import "../../assets/global-styles/global-styles";
+
+.crop-section {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .crop-section_btn {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        background: $secondary;
+        border-radius: 0.5rem;
+        display: block;
+    }
+}
