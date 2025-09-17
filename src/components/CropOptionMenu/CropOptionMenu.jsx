@@ -1,6 +1,12 @@
 import "./CropOptionMenu.scss"
 
-const BUTTON_LIST = ["Siege", "WGB", "WGB", "WGB", "WGB", "WGB", "Rune Landscape", "Rune Portrait"]
+const BUTTON_LIST = [
+    ["Siege"],
+    ["WGB", "WGB", "WGB", "WGB", "WGB"],
+    ["Rune Landscape", "Rune Portrait"],
+    ["Team Raid", "Team Raid", "Team Raid"],
+    ["Team Rift Dungeon", "Team 4 5"]
+]
 
 export const CropOptionMenu = ({ GetOption }) => {
     const ClickOption = (e) => {
@@ -14,23 +20,32 @@ export const CropOptionMenu = ({ GetOption }) => {
 
     return (
         <div id="crop-option-menu">
-            <ul className="crop-option-menu_list">
-                {BUTTON_LIST.map((item, index) => (
-                    <li
-                        className="crop-option-menu_item"
-                        key={index}
-                    >
-                        <button
-                            className={item === "Siege" ? "active" : ""}
-                            type="button"
-                            name={item}
-                            onClick={ClickOption}
+            {BUTTON_LIST.map((item, itemIndex) => (
+                <ul
+                    className="crop-option-menu_list"
+                    key={itemIndex}
+                >
+                    {item.map((button, buttonIndex) => (
+                        <li
+                            className="crop-option-menu_item"
+                            key={buttonIndex}
                         >
-                            {item !== "WGB" ? item : item + " " + index}
-                        </button>
-                    </li>
-                ))}
-            </ul>
+                            <button
+                                className={button === "Siege" ? "active" : ""}
+                                type="button"
+                                name={button}
+                                onClick={ClickOption}
+                            >
+                                {button === "WGB" ? (
+                                    button + " " + (buttonIndex + 1)
+                                ) : (
+                                    button === "Team Raid" ? (button + " " + (buttonIndex + 1)) : button
+                                )}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            ))}
         </div>
     )
 }

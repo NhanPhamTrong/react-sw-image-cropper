@@ -8,6 +8,7 @@ import { CropOptionMenu } from "../CropOptionMenu/CropOptionMenu"
 const ASPECT_RATIO = 1
 const MIN_DIMENSION = 320
 const WGB_MATCH_DISTANCE = 9.5
+const RAID_TEAM_DISTANCE = 32.65
 
 const SIEGE_CROP = {
     unit: "%", // Can be 'px' or '%'
@@ -39,6 +40,30 @@ const RUNE_PORTRAIT_CROP = {
     y: 2.4,
     width: 30,
     height: 84.9
+}
+
+const TEAM_RAID_CROP = {
+    unit: "%", // Can be 'px' or '%'
+    x: 2.4,
+    y: 45.4,
+    width: 30.2,
+    height: 30.6
+}
+
+const TEAM_RIFT_DUNGEON_CROP = {
+    unit: "%", // Can be 'px' or '%'
+    x: 10,
+    y: 19.2,
+    width: 32.5,
+    height: 30
+}
+
+const TEAM_4_5_CROP = {
+    unit: "%", // Can be 'px' or '%'
+    x: 12.4,
+    y: 19.8,
+    width: 25,
+    height: 29
 }
 
 const CROP_OPTIONS = SIEGE_CROP
@@ -79,22 +104,33 @@ export const Main = () => {
     }
 
     const GetOption = (e) => {
-        const option = e.target.name
+        const option = e.target.innerText
         let cropOption = ""
 
-        switch (option) {
+        switch (e.target.name) {
+            case "WGB":
+                cropOption = {
+                    ...WGB_CROP,
+                    y: WGB_CROP.y + WGB_MATCH_DISTANCE * (option[option.length - 1] - 1)
+                }
+                break
             case "Rune Landscape":
                 cropOption = RUNE_LANDSCAPE_CROP
                 break
             case "Rune Portrait":
                 cropOption = RUNE_PORTRAIT_CROP
                 break
-            case "WGB":
-                const innerText = e.target.innerText
+            case "Team Raid":
                 cropOption = {
-                    ...WGB_CROP,
-                    y: WGB_CROP.y + WGB_MATCH_DISTANCE * (innerText[innerText.length - 1] - 1)
+                    ...TEAM_RAID_CROP,
+                    x: TEAM_RAID_CROP.x + RAID_TEAM_DISTANCE * (option[option.length - 1] - 1)
                 }
+                break
+            case "Team Rift Dungeon":
+                cropOption = TEAM_RIFT_DUNGEON_CROP
+                break
+            case "Team 4 5":
+                cropOption = TEAM_4_5_CROP
                 break
             default:
                 cropOption = SIEGE_CROP
@@ -104,7 +140,8 @@ export const Main = () => {
             ...CROP_STATS,
             CROP_OPTIONS: cropOption
         }))
-        setTitle(option.split("_").join(" "))
+
+        setTitle(option)
     }
 
     return (

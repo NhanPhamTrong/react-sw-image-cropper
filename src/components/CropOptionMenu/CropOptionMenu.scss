@@ -2,12 +2,12 @@
 
 #crop-option-menu {
     margin-bottom: 1rem;
+    display: flex;
     
     .crop-option-menu_list {
-        display: flex;
-
         .crop-option-menu_item {
             button {
+                width: 100%;
                 padding: 0.5rem 1rem;
                 border: $on-primary solid 1px;
                 color: $on-primary;
