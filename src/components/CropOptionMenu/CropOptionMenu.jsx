@@ -5,7 +5,8 @@ const BUTTON_LIST = [
     ["WGB", "WGB", "WGB", "WGB", "WGB"],
     ["Rune Landscape", "Rune Portrait"],
     ["Team Raid", "Team Raid", "Team Raid"],
-    ["Team Rift Dungeon", "Team 4 5"]
+    ["Team Rift Dungeon", "Team 4 5"],
+    ["Boss Info"]
 ]
 
 export const CropOptionMenu = ({ GetOption }) => {

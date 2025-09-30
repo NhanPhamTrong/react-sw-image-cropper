@@ -66,6 +66,14 @@ const TEAM_4_5_CROP = {
     height: 29
 }
 
+const BOSS_INFO_CROP = {
+    unit: "%", // Can be 'px' or '%'
+    x: 35.7,
+    y: 27.8,
+    width: 43,
+    height: 58
+}
+
 const CROP_OPTIONS = SIEGE_CROP
 
 const CROP_STATS = {
@@ -131,6 +139,9 @@ export const Main = () => {
                 break
             case "Team 4 5":
                 cropOption = TEAM_4_5_CROP
+                break
+            case "Boss Info":
+                cropOption = BOSS_INFO_CROP
                 break
             default:
                 cropOption = SIEGE_CROP
