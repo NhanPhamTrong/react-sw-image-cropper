@@ -74,6 +74,14 @@ const BOSS_INFO_CROP = {
     height: 58
 }
 
+const MONSTER_SKILLS_CROP = {
+    unit: "%", // Can be 'px' or '%'
+    x: 70,
+    y: 25,
+    width: 28,
+    height: 50
+}
+
 const CROP_OPTIONS = SIEGE_CROP
 
 const CROP_STATS = {
@@ -142,6 +150,9 @@ export const Main = () => {
                 break
             case "Boss Info":
                 cropOption = BOSS_INFO_CROP
+                break
+            case "Monster Skills":
+                cropOption = MONSTER_SKILLS_CROP
                 break
             default:
                 cropOption = SIEGE_CROP
